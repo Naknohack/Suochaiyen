@@ -1,6 +1,3 @@
-local API_URL = "https://rise-evo.xyz"
-local KEY_FILE = "riseapi_checkkey.txt"
-
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
@@ -5041,4 +5038,5 @@ local function Init()
     end
     CreateUI()
 end
+
 Init()
