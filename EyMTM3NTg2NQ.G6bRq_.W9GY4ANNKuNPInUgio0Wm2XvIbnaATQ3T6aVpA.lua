@@ -4692,20 +4692,16 @@ Setting:AddToggle({
 	end,
 })
 
-SettingTab:AddButton({
+Setting:AddButton({
     Name = "Fast Attack",
     Callback = function()
-        if not FastAttack then
-            FastAttack = loadstring(game:HttpGet("https://raw.githubusercontent.com/Naknohack/Fast-Attack-/refs/heads/main/FastAttack.luau.txt"))()
-        end
+        local FastAttack = loadstring(game:HttpGet("https://raw.githubusercontent.com/Naknohack/Fast-Attack-/refs/heads/main/FastAttack.luau.txt"))()
 
         _G.FastAttack = true
 
         task.spawn(function()
             while task.wait() do
-                if FastAttack then
-                    FastAttack:Toggle(_G.FastAttack)
-                end
+                FastAttack:Toggle(_G.FastAttack)
             end
         end)
     end
